@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MensHealthNZ - Information</title>
+  <link href="../style/output.css" rel="stylesheet">
+  <link href="../style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-opensans">
+
+  <!-- Fixed Header -->
+  <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
+        <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
+      </div>
+      <!-- Nav -->
+      <nav class="flex gap-3 items-center">
+        <a href="../index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Home</a>
+        <a href="information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Information</a>
+        <a href="research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Research</a>
+        <a href="support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Support</a>
+      </nav>
+      <!-- Call to Action -->
+      <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
+        <i class="fa fa-phone"></i> Call: 0800 66 0800
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto py-12 px-4 flex flex-col md:flex-row gap-8">
+
+    <!-- Sidebar (fixed on desktop) -->
+    <aside class="fixed-sidebar">
+      <h3>Prostate Cancer Stages</h3>
+      <ul>
+        <li><a href="information.html" class="stage-link"><span class="stage-number">0</span> Very early, get informed!</a></li>
+        <li><a href="Stages/prostateStage1.html" class="stage-link"><span class="stage-number">1</span> Localized, low-risk</a></li>
+        <li><a href="Stages/prostateStage2.html" class="stage-link"><span class="stage-number">2</span> Localized, higher-risk</a></li>
+        <li><a href="Stages/prostateStage3.html" class="stage-link"><span class="stage-number">3</span> Spread to nearby tissues</a></li>
+        <li><a href="Stages/prostateStage4.html" class="stage-link"><span class="stage-number">4</span> Spread to distant organs</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Information Content -->
+    <div class="flex-1 space-y-10">
+
+      <!-- Introduction -->
+      <section class="bg-white p-8 rounded shadow">
+        <h1 class="text-3xl font-bold text-honolulu-blue mb-4 font-montserrat">Understanding Prostate Cancer</h1>
+        <p class="mb-4">
+          Prostate cancer is one of the most common cancers affecting men in New Zealand. This page provides clear and reliable information about the prostate, prostate cancer, diagnosis, treatment options, and living well after treatment.
+        </p>
+        <p>
+          Information here is based on trusted New Zealand resources, including 
+          <a href="https://prostate.org.nz/" class="text-honolulu-blue underline">Prostate Cancer Foundation NZ</a>, 
+          <a href="https://www.cancer.org.nz/" class="text-honolulu-blue underline">Cancer Society NZ</a>, and 
+          <a href="https://prostatematters.co.nz/" class="text-honolulu-blue underline">Prostate Matters</a>.
+        </p>
+      </section>
+
+    <!-- What is the Prostate -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">What is the Prostate?</h2>
+      <p class="text-gray-700">
+        The prostate is a small gland, about the size of a walnut, located just below the bladder. It produces seminal fluid, which nourishes and transports sperm. As men age, the prostate often enlarges naturally, which may or may not cause problems.
+      </p>
+    </section>
+
+    <!-- What is Prostate Cancer -->
+    <section class="bg-white p-6 rounded shadow flex flex-col md:flex-row gap-6 items-center">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">What is Prostate Cancer?</h2>
+          <p class="text-gray-700 mb-4">
+            Prostate cancer develops when abnormal cells in the prostate gland grow uncontrollably. It often grows slowly, but some types can be aggressive and spread outside the gland.
+          </p>
+        <a href="https://prostatematters.co.nz/prostate-cancer/what-is-prostate-cancer/" class="text-honolulu-blue underline">Learn more at Prostate Matters</a>
+      </div>
+      <div class="md:w-1/2">
+        <img src="../images/prostate.png" alt="Prostate Cancer Info" class="rounded shadow-md">
+      </div>
+    </section>
+
+    <!-- Symptoms & Risk Factors -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Symptoms & Risk Factors</h2>
+      <p class="text-gray-700 mb-4">
+        Early prostate cancer often has no symptoms. When symptoms occur, they may include:
+      </p>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+        <li>Frequent urination, especially at night</li>
+        <li>Difficulty starting or stopping urination</li>
+        <li>Weak or interrupted urine flow</li>
+        <li>Blood in urine or semen</li>
+        <li>Discomfort in the pelvic area</li>
+      </ul>
+      <p class="text-gray-700 mb-4">
+        Risk increases with age (especially over 50), having a family history of prostate cancer, and for Māori and Pasifika men. Lifestyle factors such as diet and physical activity may also play a role.
+      </p>
+    </section>
+
+    <!-- Support & Information for Māori Men -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Information & Support for Māori Men</h2>
+      <p class="text-gray-700 mb-4">
+        Māori men are at higher risk of prostate cancer and may face unique challenges in accessing healthcare. Early detection is vital, and support is available to ensure culturally appropriate care.
+      </p>
+      
+      <h3 class="font-semibold text-honolulu-blue mb-2">Key Insights</h3>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+        <li>Māori men are more likely to be diagnosed at a later stage and have higher mortality rates.</li>
+        <li>Cultural and systemic barriers can affect timely healthcare access.</li>
+        <li>Family and whānau involvement is important in health decisions.</li>
+      </ul>
+
+      <h3 class="font-semibold text-honolulu-blue mb-2">Support & Resources</h3>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+        <li><a href="https://www.health.govt.nz/maori-health" class="text-honolulu-blue underline">Te Whatu Ora – Māori Health</a>: Offers comprehensive information on Māori health services and programmes across New Zealand.</li>
+        <li><a href="https://healthify.nz/support/m/maori-health-support" class="text-honolulu-blue underline">Healthify – Māori Health Support</a>: A directory to locate Māori health services and support groups in your area.</li>
+        <li><a href="https://www.teakawhaiora.nz/" class="text-honolulu-blue underline">Te Aka Whai Ora (Māori Health Authority)</a>: Although disestablished in 2024, their website remains a valuable resource for understanding past initiatives and services.</li>
+      </ul>
+
+      <p class="text-gray-700">
+        Māori men are encouraged to have regular check-ups, PSA monitoring, and involve whānau in health decisions. Early engagement with culturally sensitive health services can improve outcomes.
+      </p>
+    </section>
+
+
+    <!-- Testing & Diagnosis -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Testing & Diagnosis</h2>
+      <p class="text-gray-700 mb-4">
+        If prostate cancer is suspected, doctors may use several methods to confirm the diagnosis:
+      </p>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+        <li><strong>PSA Test:</strong> A blood test that measures prostate-specific antigen levels.</li>
+        <li><strong>Biopsy:</strong> Tissue samples are taken for testing (<a href="https://www.cdhb.health.nz/health-services/urology/" class="text-honolulu-blue underline">Transperineal Biopsy PDF</a>).</li>
+        <li><strong>Gleason Score:</strong> Assesses how aggressive the cancer is 
+          (<a href="https://prostatematters.co.nz/prostate-cancer/the-gleason-score/" class="text-honolulu-blue underline">Learn More</a>).
+        </li>
+        <li><strong>Staging:</strong> Imaging tests (MRI, bone scans) show if cancer has spread 
+          (<a href="https://prostatematters.co.nz/prostate-cancer/staging-prostate-cancer-measuring-its-severity/" class="text-honolulu-blue underline">Details</a>).
+        </li>
+      </ul>
+    </section>
+
+    <!-- Treatment Options -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-4 font-montserrat">Treatment Options</h2>
+      <p class="text-gray-700 mb-4">
+        Treatment depends on the stage and type of prostate cancer, as well as personal health and preferences. Options include:
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-4 border rounded shadow-sm">
+          <h3 class="font-semibold text-honolulu-blue mb-2">Active Surveillance / Watchful Waiting</h3>
+          <p class="text-gray-700 mb-2">Close monitoring for slow-growing cancers.</p>
+          <a href="https://prostatematters.co.nz/prostate-cancer/active-surveillance-for-prostate-cancer/" class="text-honolulu-blue underline">Learn More</a>
+        </div>
+        <div class="p-4 border rounded shadow-sm">
+          <h3 class="font-semibold text-honolulu-blue mb-2">Surgery (Radical Prostatectomy)</h3>
+          <p class="text-gray-700 mb-2">Removal of the prostate gland. May affect continence and erections.</p>
+          <a href="https://www.cdhb.health.nz/health-services/urology/" class="text-honolulu-blue underline">Patient PDF</a>
+        </div>
+        <div class="p-4 border rounded shadow-sm">
+          <h3 class="font-semibold text-honolulu-blue mb-2">Radiotherapy</h3>
+          <p class="text-gray-700 mb-2">Uses high-energy rays to target cancer cells.</p>
+          <a href="https://prostatematters.co.nz/prostate-cancer/robotic-prostatectomy-or-radiotherapy-for-localised-prostate-cancer/" class="text-honolulu-blue underline">More Info</a>
+        </div>
+        <div class="p-4 border rounded shadow-sm">
+          <h3 class="font-semibold text-honolulu-blue mb-2">Hormone Therapy & Other Treatments</h3>
+          <p class="text-gray-700 mb-2">Reduces testosterone that fuels cancer growth.</p>
+          <a href="https://www.stampedetrial.org/" class="text-honolulu-blue underline">Clinical Trial Info</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Living with Prostate Cancer -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Living with Prostate Cancer</h2>
+      <p class="text-gray-700 mb-4">
+        After treatment, many men experience changes such as urinary incontinence or erectile dysfunction. Support is available to help manage these challenges. 
+      </p>
+      <ul class="list-disc pl-5 text-gray-700 mb-4">
+        <li><a href="https://prostatematters.co.nz/prostate-cancer/prostate-cancer-diet-and-lifestyle/" class="text-honolulu-blue underline">Diet and lifestyle guidance</a></li>
+        <li><a href="https://pcpep.org/" class="text-honolulu-blue underline">Prostate Cancer Patient Empowerment Programme (PC-PEP)</a></li>
+        <li>Continence care after surgery (<a href="https://www.cdhb.health.nz/health-services/urology/" class="text-honolulu-blue underline">CDHB PDF</a>)</li>
+      </ul>
+    </section>
+
+    <!-- Research & Clinical Trials -->
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Research & Clinical Trials</h2>
+      <p class="text-gray-700 mb-4">
+        New treatments and approaches are constantly being developed. International research includes trials such as 
+        <a href="https://www.stampedetrial.org/" class="text-honolulu-blue underline">STAMPEDE</a> and 
+        <a href="https://prostate.uroonco.uroweb.org/video/peace-1-trial-results-with-dr-alberto-bossi/" class="text-honolulu-blue underline">PEACE-1</a>.
+      </p>
+      <p class="text-gray-700">
+        Visit our <a href="research.html" class="text-honolulu-blue underline">Research page</a> for summaries of key studies, including the latest findings from the 
+        <a href="https://www.malaghan.org.nz/" class="text-honolulu-blue underline">Malaghan Institute</a> and 
+        <a href="https://www.icr.ac.uk/" class="text-honolulu-blue underline">Institute of Cancer Research</a>.
+      </p>
+    </section>
+
+  </main>
+
+</body>
+</html>
