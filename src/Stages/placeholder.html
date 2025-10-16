@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 0 – MensHealthNZ</title>
+  <link href="../../style/output.css" rel="stylesheet">
+  <link href="../../style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-opensans">
+
+  <!-- Header -->
+  <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
+        <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
+      </div>
+      <nav class="flex gap-3 items-center">
+        <a href="../index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Home</a>
+        <a href="../information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Information</a>
+        <a href="../research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Research</a>
+        <a href="../support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Support</a>
+      </nav>
+      <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
+        <i class="fa fa-phone"></i> Call: 0800 66 0800
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto py-12 px-4">
+    <div class="flex flex-col md:flex-row gap-8">
+      
+      <!-- Sidebar -->
+      <aside class="fixed-sidebar">
+        <h3>Prostate Cancer Stages</h3>
+        <ul>
+          <li><a href="prostateStage0.html" class="stage-link active"><span class="stage-number">0</span> Very early, abnormal cells</a></li>
+          <li><a href="prostateStage1.html" class="stage-link"><span class="stage-number">1</span> Localized, low-risk</a></li>
+          <li><a href="prostateStage2.html" class="stage-link"><span class="stage-number">2</span> Localized, higher-risk</a></li>
+          <li><a href="prostateStage3.html" class="stage-link"><span class="stage-number">3</span> Spread to nearby tissues</a></li>
+          <li><a href="prostateStage4.html" class="stage-link"><span class="stage-number">4</span> Spread to distant organs</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main stage content -->
+      <div class="flex-1">
+        
+        <!-- Stage 0 overview -->
+        <section class="bg-white p-8 rounded shadow mb-8">
+          <h1 class="text-3xl font-bold text-honolulu-blue mb-4 font-montserrat">Stage 0: The Very Beginning</h1>
+          <p class="text-gray-700 mb-4">
+            Stage 0 prostate cancer — sometimes called <strong>carcinoma in situ</strong> — is when a few abnormal cells are found inside the prostate, but they haven’t spread or become aggressive.
+          </p>
+          <p class="text-gray-700 mb-4">
+            At this stage, most men have <strong>no symptoms</strong>. It’s often picked up during a routine <strong>PSA test</strong> or biopsy. Early detection means treatment options are simple — and sometimes, no treatment is needed yet.
+          </p>
+
+          <!-- Image section -->
+          <div class="flex justify-center my-6">
+            <img src="../images/prostate-stage0-diagram.png" alt="Illustration of Stage 0 prostate changes" class="rounded-lg shadow-lg max-w-md">
+          </div>
+
+          <p class="text-gray-700 mb-6">
+            For younger men, Stage 0 is a reminder: <strong>get checked early</strong>, especially if prostate cancer runs in your family. 
+            Catching it here makes all the difference.
+          </p>
+
+          <!-- CTA buttons -->
+          <div class="flex gap-4 flex-wrap mt-4">
+            <a href="../information.html" 
+              class="bg-honolulu-blue text-white py-3 px-6 rounded font-semibold font-montserrat hover:bg-blue-950 hover:bg-opacity-10 transition flex items-center gap-2">
+              <i class="fa-solid fa-book-open"></i> Learn more about PSA tests
+            </a>
+
+            <a href="../support.html" 
+              class="bg-steel-blue text-white py-3 px-6 rounded font-semibold font-montserrat hover:bg-blue-950 hover:bg-opacity-10 transition flex items-center gap-2">
+              <i class="fa-solid fa-comments"></i> Talk to someone
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+</body>
+</html>

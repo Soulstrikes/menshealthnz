@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MensHealthNZ - Support</title>
+  <link href="../style/output.css" rel="stylesheet">
+  <link href="../style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-opensans">
+
+  <!-- Fixed Header -->
+  <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
+        <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
+      </div>
+      <!-- Nav -->
+      <nav class="flex gap-3 items-center">
+        <a href="index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Home</a>
+        <a href="information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Information</a>
+        <a href="research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Research</a>
+        <a href="support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Support</a>
+      </nav>
+      <!-- Call to Action -->
+      <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
+        <i class="fa fa-phone"></i> Call: 0800 66 0800
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="max-w-6xl mx-auto flex gap-6 py-8 px-4">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="text-lg font-bold text-blue-800 mb-3 pt-2">Choose a Region</h2>
+
+      <ul class="space-y-2">
+        <li><button onclick="showRegion('auckland')" class="region-btn">Auckland</button></li>
+        <li><button onclick="showRegion('northland')" class="region-btn">Northland</button></li>
+        <li><button onclick="showRegion('waikato')" class="region-btn">Waikato</button></li>
+        <li><button onclick="showRegion('bayofplenty')" class="region-btn">Bay of Plenty</button></li>
+        <li><button onclick="showRegion('gisborne')" class="region-btn">Gisborne</button></li>
+        <li><button onclick="showRegion('hawkesbay')" class="region-btn">Hawke's Bay</button></li>
+        <li><button onclick="showRegion('taranaki')" class="region-btn">Taranaki</button></li>
+        <li><button onclick="showRegion('wanganui')" class="region-btn">Wanganui-Manawatu</button></li>
+        <li><button onclick="showRegion('wellington')" class="region-btn">Wellington</button></li>
+        <li><button onclick="showRegion('marlborough')" class="region-btn">Marlborough</button></li>
+        <li><button onclick="showRegion('nelsontasman')" class="region-btn">Nelson-Tasman</button></li>
+        <li><button onclick="showRegion('westcoast')" class="region-btn">West Coast</button></li>
+        <li><button onclick="showRegion('canterbury')" class="region-btn">Canterbury</button></li>
+        <li><button onclick="showRegion('otago')" class="region-btn">Otago</button></li>
+        <li><button onclick="showRegion('southland')" class="region-btn">Southland</button></li>
+      </ul>
+    </aside>
+
+    <!-- Content -->
+    <section class="bg-white p-6 rounded shadow mb-8 text-center fixed-size-section">
+
+      <h2 class="text-3xl font-bold text-honolulu-blue mb-4">Support Groups</h2>
+      <p class="text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto text-base">
+        Prostate Cancer Foundation Support Groups offer free, confidential, and understanding spaces 
+        for men diagnosed with prostate cancer, along with their partners, families, and whānau. 
+        Across New Zealand, trained volunteer coordinators provide both local and online support to 
+        help people navigate the challenges of diagnosis, treatment, and recovery.
+      </p>
+
+      <p class="text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto text-base">
+        Some groups meet regularly, while others connect through Prost-FIT classes or social gatherings. 
+        Every group is unique, but all share a common goal — to provide encouragement, information, and a 
+        sense of community through shared experience. 
+      </p>
+
+      <hr class="my-6 border-gray-300">
+
+      <h2 class="text-2xl font-semibold text-honolulu-blue mb-4">Choose a Region</h2>
+      <p class="mb-4 text-gray-700">Select your region to see local support contacts for prostate cancer in New Zealand.</p>
+
+      <div class="mobile-region-select">
+        <select id="regionSelect" onchange="showRegion(this.value)">
+          <option value="auckland" selected>Auckland</option>
+          <option value="northland">Northland</option>
+          <option value="waikato">Waikato</option>
+          <option value="bayofplenty">Bay of Plenty</option>
+          <option value="gisborne">Gisborne</option>
+          <option value="hawkesbay">Hawke's Bay</option>
+          <option value="taranaki">Taranaki</option>
+          <option value="wanganui">Wanganui-Manawatu</option>
+          <option value="wellington">Wellington</option>
+          <option value="marlborough">Marlborough</option>
+          <option value="nelsontasman">Nelson-Tasman</option>
+          <option value="westcoast">West Coast</option>
+          <option value="canterbury">Canterbury</option>
+          <option value="otago">Otago</option>
+          <option value="southland">Southland</option>
+        </select>
+      </div>
+      
+      <!-- Auckland Contacts -->
+      <div id="auckland" class="text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Auckland</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Rodney</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Doug Cresswell</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 495 8157</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">rodney@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">North Shore</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Bruce Cochrane</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 650 289</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">aucklandnorth@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Central</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">0800 66 0800</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">aucklandcentral@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">East</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Ruben Naidoo</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 241 3668</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">aucklandeast@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">West</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">John and Lilian Woodards</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 208 2089</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">aucklandwest@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Women's Group</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">09 414 46100 or 027 293 9920</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">womensakl@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">South</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">0800 66 0800</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">aucklandsouth@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Northland Contacts -->
+      <div id="northland" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Northland</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Kaitaia</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">0800 660 0800</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">kaitaia@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Whangarei</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 274 2435 or 027 293 9920</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">whangarei@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- Waikato Contacts -->
+      <div id="waikato" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Waikato</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Cambridge</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Ron Greenwood</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">07 823 5877 or 027 276 0336</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">cambridge@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Whangamata</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Ian Hunt and Ross Falconer</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 479 1768 (Ian) or 021 894 832 (Ross)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">whangamata@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Waihi</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Raewyn Paviour</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">0800 66 0800</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">waihi@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Hamilton</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Brent Wood</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 222 2575</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">hamilton@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bay of Plenty Contacts -->
+      <div id="bayofplenty" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Bay of Plenty</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Katikati</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Rod Calver</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">07 5490363 or 027 590 9710</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">katikati@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Tauranga</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Mike Lane and Mike Jolly</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 054 4660 (Mike Lane) 0275 868 789 (Mike Jolly)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">tauranga@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Rotorua</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Heinz Fett</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 570 7601</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">rotorua@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Whakatane</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Mark Wootton</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 273 1437</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">whakatane@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Gisborne Contacts -->
+      <div id="gisborne" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Gisborne</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="contact-box">
+            <div class="suburb-header">Gisborne</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Darrington Slater</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 063 4515</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">gisborne@prostate.org.nz</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Hawke's Bay Contacts -->
+      <div id="hawkesbay" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Hawke's Bay</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Hawke's Bay Partners</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Heather Osborne</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 252 6534</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">hawkesbaypartners@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Hawke's Bay</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Ven and Trish Plummer</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">06 834 6302 or 021 487 373 (Ven)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">hawkesbay@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Taranaki Contacts -->
+      <div id="taranaki" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Taranaki</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">New Plymouth</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Paul Klenner and Dennis Hardie</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 084 30914 (Dennis) or 022 413 1994 (Paul)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">newplymouth@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Wanganui-Manawatu Contacts -->
+      <div id="wanganui" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Wanganui-Manawatu</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Wanganui</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Brian Deadman</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">06 348 7115 or 027 555 0338</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">wanganui@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Palmerston North</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Bruce Avery</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 625 180</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">manawatu@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Wellington Contacts -->
+      <div id="wellington" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Wellington</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Masterton</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Robert and Susan Brader</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">06 370 8699 or 027 272 1892</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">masterton@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Wellington Pals</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Graeme Coutts</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">022 674 7832</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">lowerhutt@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Lower Hutt</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Bill Guthrie</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 247 5427</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">lowerehutt@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Marlborough Contacts -->
+      <div id="marlborough" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Marlborough</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Marlborough</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Murray Eyles</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 608 5667</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">marlborough@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Nelson-Tasman Contacts -->
+      <div id="nelsontasman" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Nelson-Tasman</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Nelson</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Bill Fergie</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">03 544 8635 or 021 062 0427</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">nelson@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- West Coast Contacts -->
+      <div id="westcoast" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">West Coast</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">West Coast</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Peter Cropp</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 436 4067</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">infoservice@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Canterbury Contacts -->
+      <div id="canterbury" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Canterbury</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Greymouth/Westport</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">David and Ruth Clarke</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 877 8070</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">westport@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Rangiora</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Dean and Lois Farrow</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 0224 6078 (Dean)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">rangiora@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Christchurch AM Group</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Derek Goring</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 277 7639</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">christchurch.am@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Christchurch PM Group</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Russell George</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">022 697 3614</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">christchurch.pm@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Selwyn</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Chris and Dianne Ward</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">(03) 321 7046, 027 437 1254 (Chris) or 021 371 254 (Dianne)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">selwyn@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Ashburton</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Doug Collie</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">0727 5100 556</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">ashburton@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Timaru</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Roger Rooke</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 892 5464</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">infoservice@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Selwyn Men's Coffee Chat Group</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Chris Ward</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 437 1254</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">selwyn@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Selwyn Women's Coffee Chat Group</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Dianne Ward</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 371 254</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">selwyn@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Otago Contacts -->
+      <div id="otago" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Otago</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Dunedin</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Geoff Gray</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 959 591</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">dunedin@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Dunedin Partners Network</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Angela Melrose</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 406 2948</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">support@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Central Otago 'Alexandra'</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">David and Ruth Clarke</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 877 8070</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">alexandra@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Central Otago 'Roxburgh'</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">David and Ruth Clarke</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 877 8070</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">roxburgh@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Central Otago 'Queenstown'</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">David and Ruth Clarke</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 877 8070</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">alexandra@prostate.org.nz</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Southland Contacts -->
+      <div id="southland" class="hidden text-left max-w-6xl mx-auto">
+        <h3 class="text-2xl font-bold mb-4 text-blue-800">Southland</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="contact-box">
+            <div class="suburb-header">Invercargill</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Trish and Terry Wright</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">021 029 32711 (Terry) or 021 110 9103 (Trish)</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">invercargill@prostate.org.nz</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <div class="suburb-header">Wanaka / Queenstown</div>
+            <div class="contact-content">
+              <p class="label"><i class="fa">&#xf007;</i> Coordinator</p>
+              <p class="value">Daryn Jarvie</p>
+              <p class="label"><i class="fa">&#xf095;</i> Phone</p>
+              <p class="value">027 487 3081</p>
+              <p class="label"><i class="fa">&#xf0e0;</i> Email</p>
+              <p class="value">infoservice@prostate.org.nz</p>
+            </div>
+          </div>
+
+  </div>
+</div>
+
+
+    </section>
+  </main>
+
+  <script src="../js/regions.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MensHealthNZ</title>
+  <link href="../../style/output.css" rel="stylesheet">
+  <link href="../style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-opensans">
+
+  <!-- Fixed Header -->
+  <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
+        <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
+      </div>
+      <!-- Nav -->
+      <nav class="flex gap-3 items-center">
+        <a href="index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Home</a>
+        <a href="information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Information</a>
+        <a href="research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Research</a>
+        <a href="support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Support</a>
+      </nav>
+      <!-- Call to Action -->
+      <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
+        <i class="fa fa-phone"></i> Call: 0800 66 0800
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto py-12 px-4">
+
+    <!-- Flex container for sidebar + main content -->
+    <div class="flex flex-col md:flex-row gap-8">
+
+      <!-- Sidebar on the far left -->
+    <aside class="fixed-sidebar">
+      <h3>Prostate Cancer Stages</h3>
+      <ul>
+        <li><a href="information.html" class="stage-link"><span class="stage-number">0</span> Very early, get informed!</a></li>
+        <li><a href="Stages/prostateStage1.html" class="stage-link"><span class="stage-number">1</span> Localized, low-risk</a></li>
+        <li><a href="Stages/prostateStage2.html" class="stage-link"><span class="stage-number">2</span> Localized, higher-risk</a></li>
+        <li><a href="Stages/prostateStage3.html" class="stage-link"><span class="stage-number">3</span> Spread to nearby tissues</a></li>
+        <li><a href="Stages/prostateStage4.html" class="stage-link"><span class="stage-number">4</span> Spread to distant organs</a></li>
+      </ul>
+    </aside>
+
+      <!-- Main Content -->
+      <div class="flex-1">
+
+        <!-- Welcome Section -->
+        <section class="bg-white p-8 rounded shadow mb-8">
+          <h1 class="text-3xl font-bold text-honolulu-blue mb-4 font-montserrat">Welcome to MensHealthNZ</h1>
+          <p class="mb-4">
+            This is your central hub for prostate cancer information, support, and resources in New Zealand. 
+            Whether you're learning about the prostate for the first time, supporting a mate, or looking up 
+            the latest research, we’ve got you covered.
+          </p>
+          <p class="mb-4">
+            Our mission is to keep it simple, reliable, and easy to read — so you can get the facts fast and 
+            connect with the right support when you need it.
+          </p>
+          
+      <div class="flex gap-4 flex-wrap mt-4">
+        <a href="support.html" 
+          class="bg-honolulu-blue text-white py-3 px-6 rounded font-semibold font-montserrat hover:bg-blue-950 hover:bg-opacity-10 transition flex items-center gap-2">
+          <i class="fa-solid fa-comments"></i> Talk to Someone
+        </a>
+
+        <a href="information.html" 
+          class="bg-steel-blue text-white py-3 px-6 rounded font-semibold font-montserrat hover:bg-blue-950 hover:bg-opacity-10 transition flex items-center gap-2">
+          <i class="fa-solid fa-book-open"></i> Quick Guide to Prostate Cancer
+        </a>
+      </div>
+        </section>
+
+        <!-- Quick Intro: What is the Prostate? -->
+        <section class="bg-blue-50 p-6 rounded shadow mb-8">
+          <h2 class="text-2xl font-semibold text-honolulu-blue mb-3 font-montserrat">What is the Prostate?</h2>
+          <p class="text-gray-700">
+            The prostate is a small gland, about the size of a walnut, found only in men. 
+            It helps make semen (the fluid that carries sperm). 
+            Most guys don’t notice it — until it causes problems.
+          </p>
+          <p class="text-gray-700 mt-2 font-semibold">
+            Prostate cancer is the most common cancer in Kiwi men — but when found early, it’s usually treatable. 
+            Knowing the signs and getting checked can save lives.
+          </p>
+        </section>
+
+        <!-- Interactive Age Awareness Slider -->
+        <section class="bg-white p-6 rounded shadow mb-8 text-center">
+          <h2 class="text-2xl font-semibold text-honolulu-blue mb-4 font-montserrat">How Does Age Affect Prostate Cancer Risk?</h2>
+          <div class="max-w-lg mx-auto">
+            <input 
+              type="range" 
+              id="ageSlider" 
+              min="18" 
+              max="80" 
+              value="25" 
+              class="w-full accent-honolulu-blue"
+              oninput="updateAgeInfo(this.value)"
+            >
+            <p class="mt-3 text-gray-700 font-semibold">
+              Age: <span id="ageValue">25</span>
+            </p>
+            <p id="ageMessage" class="mt-2 text-gray-800 italic">
+              Very rare, but awareness starts early.
+            </p>
+          </div>
+        </section>
+        <!-- NZ Prostate Cancer Statistics -->
+        <section class="bg-blue-50 p-6 rounded shadow mb-8">
+          <h2 class="text-2xl font-semibold text-honolulu-blue mb-3 font-montserrat">Prostate Cancer in New Zealand</h2>
+          <p class="text-gray-700 mb-4">
+            In New Zealand, approximately <strong>4,334 men</strong> are diagnosed with prostate cancer every year.
+          </p>
+          <p class="text-gray-700 mb-4">
+            Around <strong>740 men</strong> die from prostate cancer annually — that’s more than <a href="https://www.transport.govt.nz/statistics-and-insights/safety-road-deaths/sheet/provisional-road-deaths" class="text-honolulu-blue font-semibold hover:underline font-montserrat">twice the road toll →</a>.
+          </p>
+
+          <div class="bg-blue-50 rounded-lg p-4 mt-4">
+            <p class="text-xl font-bold text-honolulu-blue mb-1">1 in 8</p>
+            <p class="text-gray-700 font-semibold">New Zealand men will be diagnosed with prostate cancer in their lifetime.</p>
+          </div>
+        </section>
+
+
+        <!-- Awareness Video Section -->
+        <section class="bg-white p-6 rounded shadow mb-8">
+          <h2 class="text-2xl font-semibold text-honolulu-blue mb-4 font-montserrat">
+            Prostate Cancer — Not Just an Old Man's Disease
+          </h2>
+          <div class="flex justify-center">
+            <video controls class="w-full max-w-3xl rounded shadow-lg">
+              <source src="../images/prostate-awareness.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="text-gray-700 mt-4 text-center">
+            In this short video, <strong>Danny Bedingfield (age 39)</strong> shares his personal message about 
+            why prostate cancer awareness is important for men of all ages — not just older men.
+          </p>
+        </section>
+
+        <!-- Quick Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          <div class="bg-white p-6 rounded shadow border-l-4 border-honolulu-blue">
+            <h3 class="text-honolulu-blue font-semibold text-xl mb-2 font-montserrat">Information Hub</h3>
+            <p class="text-gray-600 mb-2">
+              Short guides on what the prostate is, symptoms, testing, and treatment options.
+            </p>
+            <a href="information.html" class="text-honolulu-blue font-semibold hover:underline font-montserrat">Explore Information →</a>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow border-l-4 border-honolulu-blue">
+            <h3 class="text-honolulu-blue font-semibold text-xl mb-2 font-montserrat">Latest Research</h3>
+            <p class="text-gray-600 mb-2">
+              Stay updated with breakthroughs, trials, and what’s coming next in prostate health.
+            </p>
+            <a href="research.html" class="text-honolulu-blue font-semibold hover:underline font-montserrat">View Research →</a>
+          </div>
+
+          <div class="bg-white p-6 rounded shadow border-l-4 border-honolulu-blue">
+            <h3 class="text-honolulu-blue font-semibold text-xl mb-2 font-montserrat">Support Services</h3>
+            <p class="text-gray-600 mb-2">
+              Find support groups, helplines, and practical help for you and your whānau.
+            </p>
+            <a href="support.html" class="text-honolulu-blue font-semibold hover:underline font-montserrat">Find Support →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="../js/ageSlider.js"></script>
+</body>
+</html>
