@@ -291,6 +291,31 @@ main {
 }
 
 /* ==============================
+   Header & Navbar Fixes
+============================== */
+header .max-w-6xl {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+header nav a {
+  white-space: nowrap;
+}
+
+header > .max-w-6xl > a {
+  flex-shrink: 0;
+}
+
+/* ==============================
    Responsive Design
 ============================== */
 @media (max-width: 48rem) {
@@ -327,6 +352,28 @@ main {
   }
 
   .grid { grid-template-columns: 1fr; }
+
+  /* Header responsive adjustments */
+  header .flex.items-center.gap-4 {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  header nav {
+    width: 100%;
+    justify-content: center;
+    order: 2;
+    margin-bottom: 0.5rem;
+  }
+
+  header > .max-w-6xl > a {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
 }
 
 @media (min-width: 48rem) {
