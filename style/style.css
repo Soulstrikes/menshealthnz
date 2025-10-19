@@ -1,4 +1,25 @@
 /* ==============================
+   font sizes
+============================== */
+html {
+  font-size: 1.25em;
+}
+
+aside {
+  font-size: 0.8em;
+}
+
+main {
+  max-width: 70rem;
+  height: auto;
+}
+
+.main-with-sidebar {
+  padding-left: 20em; /* space for fixed sidebar */
+}
+
+
+/* ==============================
    Custom Colors
 ============================== */
 .bg-honolulu-blue { background-color: #007EC3; }
@@ -173,6 +194,8 @@
   box-shadow: 0 0.375rem 0.9375rem rgba(0,0,0,0.1);
   font-family: 'Montserrat', sans-serif;
   z-index: 40;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 .fixed-sidebar h3 {
