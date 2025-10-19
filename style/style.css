@@ -15,7 +15,7 @@ main {
 }
 
 .main-with-sidebar {
-  padding-left: 24rem; /* match fixed-sidebar width + gap */
+  padding-left: 20rem;
 }
 
 /* ==============================
