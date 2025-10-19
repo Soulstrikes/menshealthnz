@@ -15,9 +15,8 @@ main {
 }
 
 .main-with-sidebar {
-  padding-left: 20em; /* space for fixed sidebar */
+  padding-left: 24rem; /* match fixed-sidebar width + gap */
 }
-
 
 /* ==============================
    Custom Colors
@@ -322,10 +321,14 @@ main {
     text-align: left;
   }
 
+  .main-with-sidebar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .grid { grid-template-columns: 1fr; }
 }
 
 @media (min-width: 48rem) {
   .grid { grid-template-columns: repeat(2, 1fr); }
 }
-
