@@ -6,7 +6,7 @@ html {
 }
 
 aside {
-  font-size: 0.8em;
+  font-size: 0.8em !important;
 }
 
 main {
@@ -16,6 +16,10 @@ main {
 
 .main-with-sidebar {
   padding-left: 20rem;
+}
+
+[id] {
+  scroll-margin-top: 10rem; /* adjust to match header height */
 }
 
 /* ==============================
