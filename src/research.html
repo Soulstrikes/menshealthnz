@@ -14,19 +14,56 @@
   <!-- Header -->
   <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      
+      <!-- Logo -->
       <div class="flex items-center gap-4">
         <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
         <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
       </div>
-      <nav class="flex gap-3 items-center">
+
+      <!-- Nav -->
+      <nav class="flex gap-3 items-center relative">
         <a href="../index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Home</a>
-        <a href="information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Information</a>
+
+        <!-- Information dropdown -->
+        <div class="relative">
+          <button id="infoBtn" class="flex items-center gap-1 text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-20 transition">
+            Prostate Info <i class="fa fa-chevron-down text-xs"></i>
+          </button>
+
+          <ul id="infoDropdown" class="absolute left-0 mt-1 w-56 bg-honolulu-blue text-white rounded-lg shadow-lg hidden z-50 border border-blue-800">
+            <li>
+              <a href="information.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                General prostate information</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage1.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Localized, low-risk (Stage 1)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage2.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Localized, higher-risk (Stage 2)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage3.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Spread to nearby tissues (Stage 3)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage4.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 transition-colors duration-150">
+                Spread to distant organs (Stage 4)</a>
+            </li>
+          </ul>
+        </div>
+
         <a href="research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Research</a>
         <a href="support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Support</a>
       </nav>
+
+      <!-- Call to Action -->
       <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
         <i class="fa fa-phone"></i> Call: 0800 66 0800
       </a>
+      
     </div>
   </header>
 
@@ -159,5 +196,6 @@
     </section>
   </main>
 
+  <script src="../js/header-dropdown.js"></script>
 </body>
 </html>

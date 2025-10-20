@@ -14,38 +14,78 @@
   <!-- Fixed Header -->
   <header class="bg-honolulu-blue text-white py-4 shadow-lg sticky top-0 left-0 right-0 z-50">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center flex-wrap gap-4">
+      
       <!-- Logo -->
       <div class="flex items-center gap-4">
         <div class="w-12 h-12 bg-steel-blue rounded-lg flex items-center justify-center font-bold text-lg font-montserrat">MH</div>
         <div class="text-xl font-bold font-montserrat">MensHealthNZ</div>
       </div>
+
       <!-- Nav -->
-      <nav class="flex gap-3 items-center">
+      <nav class="flex gap-3 items-center relative">
         <a href="../index.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Home</a>
-        <a href="information.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition font-bold">Information</a>
+
+        <!-- Information dropdown -->
+        <div class="relative">
+          <button id="infoBtn" class="flex items-center gap-1 text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-20 transition  font-bold">
+            Prostate Info <i class="fa fa-chevron-down text-xs"></i>
+          </button>
+
+          <ul id="infoDropdown" class="absolute left-0 mt-1 w-56 bg-honolulu-blue text-white rounded-lg shadow-lg hidden z-50 border border-blue-800">
+            <li>
+              <a href="information.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                General prostate information</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage1.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Localized, low-risk (Stage 1)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage2.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Localized, higher-risk (Stage 2)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage3.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 border-b border-blue-700 transition-colors duration-150">
+                Spread to nearby tissues (Stage 3)</a>
+            </li>
+            <li>
+              <a href="Stages/prostateStage4.html" class="block w-full py-[0.4em] px-[1em] hover:bg-blue-950 hover:bg-opacity-50 transition-colors duration-150">
+                Spread to distant organs (Stage 4)</a>
+            </li>
+          </ul>
+        </div>
+
         <a href="research.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Research</a>
         <a href="support.html" class="text-white py-2 px-4 rounded hover:bg-blue-950 hover:bg-opacity-10 transition">Support</a>
       </nav>
+
       <!-- Call to Action -->
       <a href="tel:0800-660-800" class="flex items-center gap-2 bg-steel-blue py-2 px-4 rounded font-semibold hover:bg-blue-950 hover:bg-opacity-10 transition">
         <i class="fa fa-phone"></i> Call: 0800 66 0800
       </a>
+      
     </div>
   </header>
+
 
   <main class="max-w-6xl mx-auto py-12 px-4 main-with-sidebar">
 
     <!-- Sidebar (fixed on desktop) -->
-    <aside class="fixed-sidebar">
-      <h3>Prostate Cancer Stages</h3>
-      <ul>
-        <li><a href="information.html" class="stage-link"><span class="stage-number">0</span> Very early, get informed!</a></li>
-        <li><a href="Stages/prostateStage1.html" class="stage-link"><span class="stage-number">1</span> Localized, low-risk</a></li>
-        <li><a href="Stages/prostateStage2.html" class="stage-link"><span class="stage-number">2</span> Localized, higher-risk</a></li>
-        <li><a href="Stages/prostateStage3.html" class="stage-link"><span class="stage-number">3</span> Spread to nearby tissues</a></li>
-        <li><a href="Stages/prostateStage4.html" class="stage-link"><span class="stage-number">4</span> Spread to distant organs</a></li>
-      </ul>
-    </aside>
+<aside class="fixed-sidebar">
+  <h3>Information Sections</h3>
+  <ul>
+    <li><a href="#prostate" class="stage-link"><span class="stage-number">1</span> What is the Prostate?</a></li>
+    <li><a href="#cancer" class="stage-link"><span class="stage-number">2</span> What is Prostate Cancer?</a></li>
+    <li><a href="#symptoms" class="stage-link"><span class="stage-number">3</span> Symptoms & Risk Factors</a></li>
+    <li><a href="#maori" class="stage-link"><span class="stage-number">4</span> Information for Māori Men</a></li>
+    <li><a href="#diagnosis" class="stage-link"><span class="stage-number">5</span> Testing & Diagnosis</a></li>
+    <li><a href="#treatment" class="stage-link"><span class="stage-number">6</span> Treatment Options</a></li>
+    <li><a href="#living" class="stage-link"><span class="stage-number">7</span> Living with Prostate Cancer</a></li>
+    <li><a href="#research" class="stage-link"><span class="stage-number">8</span> Research & Clinical Trials</a></li>
+  </ul>
+</aside>
+
+
 
     <!-- Main Information Content -->
     <div class="flex-1 space-y-10">
@@ -65,7 +105,7 @@
       </section>
 
     <!-- What is the Prostate -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="prostate" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">What is the Prostate?</h2>
       <p class="text-gray-700">
         The prostate is a small gland, about the size of a walnut, located just below the bladder. It produces seminal fluid, which nourishes and transports sperm. As men age, the prostate often enlarges naturally, which may or may not cause problems.
@@ -73,7 +113,7 @@
     </section>
 
     <!-- What is Prostate Cancer -->
-    <section class="bg-white p-6 rounded shadow flex flex-col md:flex-row gap-6 items-center">
+    <section id="cancer" class="bg-white p-6 rounded shadow flex flex-col md:flex-row gap-6 items-center">
       <div class="md:w-1/2">
         <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">What is Prostate Cancer?</h2>
           <p class="text-gray-700 mb-4">
@@ -87,7 +127,7 @@
     </section>
 
     <!-- Symptoms & Risk Factors -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="symptoms" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Symptoms & Risk Factors</h2>
       <p class="text-gray-700 mb-4">
         Early prostate cancer often has no symptoms. When symptoms occur, they may include:
@@ -105,7 +145,7 @@
     </section>
 
     <!-- Support & Information for Māori Men -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="maori" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Information & Support for Māori Men</h2>
       <p class="text-gray-700 mb-4">
         Māori men are at higher risk of prostate cancer and may face unique challenges in accessing healthcare. Early detection is vital, and support is available to ensure culturally appropriate care.
@@ -132,7 +172,7 @@
 
 
     <!-- Testing & Diagnosis -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="diagnosis" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Testing & Diagnosis</h2>
       <p class="text-gray-700 mb-4">
         If prostate cancer is suspected, doctors may use several methods to confirm the diagnosis:
@@ -150,37 +190,73 @@
     </section>
 
     <!-- Treatment Options -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="treatment" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-4 font-montserrat">Treatment Options</h2>
       <p class="text-gray-700 mb-4">
         Treatment depends on the stage and type of prostate cancer, as well as personal health and preferences. Options include:
       </p>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-semibold text-honolulu-blue mb-2">Active Surveillance / Watchful Waiting</h3>
-          <p class="text-gray-700 mb-2">Close monitoring for slow-growing cancers.</p>
-          <a href="https://prostatematters.co.nz/prostate-cancer/active-surveillance-for-prostate-cancer/" class="text-honolulu-blue underline">Learn More</a>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <!-- Active Surveillance -->
+        <div class="relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+          <div class="relative p-6 bg-white bg-opacity-70 backdrop-blur-md h-full">
+            <h3 class="font-semibold text-honolulu-blue mb-3 text-lg">Active Surveillance / Watchful Waiting</h3>
+            <p class="text-gray-800 mb-3 leading-relaxed">
+              Regular monitoring for slow-growing cancers that may not need immediate treatment.
+            </p>
+            <a href="https://prostatematters.co.nz/prostate-cancer/active-surveillance-for-prostate-cancer/"
+              class="text-honolulu-blue font-medium underline hover:text-blue-700 transition-colors duration-150">
+              Learn More →
+            </a>
+          </div>
         </div>
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-semibold text-honolulu-blue mb-2">Surgery (Radical Prostatectomy)</h3>
-          <p class="text-gray-700 mb-2">Removal of the prostate gland. May affect continence and erections.</p>
-          <a href="https://www.cdhb.health.nz/health-services/urology/" class="text-honolulu-blue underline">Patient PDF</a>
+
+        <!-- Surgery -->
+        <div class="relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+          <div class="relative p-6 bg-white bg-opacity-70 backdrop-blur-md h-full">
+            <h3 class="font-semibold text-honolulu-blue mb-3 text-lg">Surgery (Radical Prostatectomy)</h3>
+            <p class="text-gray-800 mb-3 leading-relaxed">
+              Surgical removal of the prostate gland, which may affect urinary control and erections.
+            </p>
+            <a href="https://www.cdhb.health.nz/health-services/urology/"
+              class="text-honolulu-blue font-medium underline hover:text-blue-700 transition-colors duration-150">
+              Patient PDF →
+            </a>
+          </div>
         </div>
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-semibold text-honolulu-blue mb-2">Radiotherapy</h3>
-          <p class="text-gray-700 mb-2">Uses high-energy rays to target cancer cells.</p>
-          <a href="https://prostatematters.co.nz/prostate-cancer/robotic-prostatectomy-or-radiotherapy-for-localised-prostate-cancer/" class="text-honolulu-blue underline">More Info</a>
+
+        <!-- Radiotherapy -->
+        <div class="relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+          <div class="relative p-6 bg-white bg-opacity-70 backdrop-blur-md h-full">
+            <h3 class="font-semibold text-honolulu-blue mb-3 text-lg">Radiotherapy</h3>
+            <p class="text-gray-800 mb-3 leading-relaxed">
+              Uses high-energy rays to target and destroy cancer cells while preserving healthy tissue.
+            </p>
+            <a href="https://prostatematters.co.nz/prostate-cancer/robotic-prostatectomy-or-radiotherapy-for-localised-prostate-cancer/"
+              class="text-honolulu-blue font-medium underline hover:text-blue-700 transition-colors duration-150">
+              More Info →
+            </a>
+          </div>
         </div>
-        <div class="p-4 border rounded shadow-sm">
-          <h3 class="font-semibold text-honolulu-blue mb-2">Hormone Therapy & Other Treatments</h3>
-          <p class="text-gray-700 mb-2">Reduces testosterone that fuels cancer growth.</p>
-          <a href="https://www.stampedetrial.org/" class="text-honolulu-blue underline">Clinical Trial Info</a>
+
+        <!-- Hormone Therapy -->
+        <div class="relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-200">
+          <div class="relative p-6 bg-white bg-opacity-70 backdrop-blur-md h-full">
+            <h3 class="font-semibold text-honolulu-blue mb-3 text-lg">Hormone Therapy & Other Treatments</h3>
+            <p class="text-gray-800 mb-3 leading-relaxed">
+              Lowers testosterone levels to slow cancer growth; often used alongside other treatments.
+            </p>
+            <a href="https://www.stampedetrial.org/"
+              class="text-honolulu-blue font-medium underline hover:text-blue-700 transition-colors duration-150">
+              Clinical Trial Info →
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Living with Prostate Cancer -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="living" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Living with Prostate Cancer</h2>
       <p class="text-gray-700 mb-4">
         After treatment, many men experience changes such as urinary incontinence or erectile dysfunction. Support is available to help manage these challenges. 
@@ -193,7 +269,7 @@
     </section>
 
     <!-- Research & Clinical Trials -->
-    <section class="bg-white p-6 rounded shadow">
+    <section id="research" class="bg-white p-6 rounded shadow">
       <h2 class="text-2xl font-semibold text-honolulu-blue mb-2 font-montserrat">Research & Clinical Trials</h2>
       <p class="text-gray-700 mb-4">
         New treatments and approaches are constantly being developed. International research includes trials such as 
@@ -209,5 +285,6 @@
 
   </main>
 
+  <script src="../js/header-dropdown.js"></script>
 </body>
 </html>

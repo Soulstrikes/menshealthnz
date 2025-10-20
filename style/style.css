@@ -257,6 +257,20 @@ main {
   flex-shrink: 0;
 }
 
+#infoDropdown li a {
+  display: block;
+  width: 100%;
+  padding: 0.4em 1em;
+  box-sizing: border-box;
+}
+
+#infoDropdown li a:hover {
+  background-color: rgba(10, 20, 80, 0.5);
+  width: 100%;
+  border-radius: 0;
+}
+
+
 /* ==============================
    Mobile Dropdown
 ============================== */
@@ -318,6 +332,16 @@ header nav a {
 header > .max-w-6xl > a {
   flex-shrink: 0;
 }
+
+/* ==============================
+   Age Slider Width Adjustment
+============================== */
+#ageSlider {
+  width: 90%;
+  max-width: 25rem;
+  display: block;
+}
+
 
 /* ==============================
    Responsive Design
