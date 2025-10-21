@@ -74,9 +74,10 @@
     <ul>
       <li><a href="#diet" class="stage-link"><span class="stage-number">1</span> Diet & Nutrition</a></li>
       <li><a href="#exercise" class="stage-link"><span class="stage-number">2</span> Exercise & Physical Activity</a></li>
-      <li><a href="#lifestyle" class="stage-link"><span class="stage-number">3</span> Healthy Weight & Lifestyle</a></li>
-      <li><a href="#nzresearch" class="stage-link"><span class="stage-number">4</span> Latest Research in New Zealand</a></li>
-      <li><a href="#k9md" class="stage-link"><span class="stage-number">5</span> K9MD Cancer Detection Trials</a></li>
+      <li><a href="#kegel" class="stage-link"><span class="stage-number">3</span> Kegel Exercises for Men</a></li>
+      <li><a href="#lifestyle" class="stage-link"><span class="stage-number">4</span> Healthy Weight & Lifestyle</a></li>
+      <li><a href="#nzresearch" class="stage-link"><span class="stage-number">5</span> Latest Research in New Zealand</a></li>
+      <li><a href="#k9md" class="stage-link"><span class="stage-number">6</span> K9MD Cancer Detection Trials</a></li>
     </ul>
   </aside>
   
@@ -92,8 +93,8 @@
       <!-- Diet -->
       <div class="my-10" id="diet">
         <h2 class="text-2xl font-semibold text-steel-blue mb-3 font-montserrat">Diet & Nutrition</h2>
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-          <img src="../images/healthy-diet.jpg" alt="Healthy diet for prostate health" class="rounded-lg shadow-lg w-full md:w-1/2">
+        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+          <img src="../images/diet.webp" alt="Healthy diet for prostate health" class="rounded-lg shadow-lg w-full md:w-4/5">
           <p class="text-gray-700">
             Eating plenty of fruits, vegetables, and whole grains is linked to a lower risk of prostate cancer. 
             Foods like tomatoes (rich in lycopene), broccoli, and green tea contain antioxidants that help protect prostate cells.
@@ -124,31 +125,46 @@
         </div>
       </div>
 
+      <!-- Kegel Exercises -->
+      <div class="my-10" id="kegel">
+        <h2 class="text-2xl font-semibold text-steel-blue mb-3 font-montserrat">Kegel Exercises for Men</h2>
+        <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+          <img src="../images/kegel.jpg" alt="Kegel exercise instructions for men" class="rounded-lg shadow-lg w-full md:w-4/5">
+          <p class="text-gray-700">
+            Kegel exercises help strengthen the pelvic floor muscles — the same muscles that control urination and support sexual function. 
+            Regular practice can improve bladder control, erectile function, and recovery after prostate surgery. <br><br>
+            To get started, focus on tightening the muscles used to stop urinating, hold for 3–5 seconds, and then relax. 
+            Repeat 10–15 times, three times a day, while standing, sitting, or lying down. 
+            Over time, this simple routine can make a real difference in pelvic health.
+          </p>
+        </div>
+      </div>
+
       <!-- Weight & Lifestyle -->
       <div class="my-10" id="lifestyle">
         <h2 class="text-2xl font-semibold text-steel-blue mb-3 font-montserrat">Healthy Weight & Lifestyle</h2>
-        <div class="flex flex-col md:flex-row gap-6 items-center">
-          <img src="../images/healthy-lifestyle.jpg" alt="Healthy lifestyle habits" class="rounded-lg shadow-lg w-full md:w-4/5">
           <p class="text-gray-700">
             Maintaining a healthy weight and avoiding smoking or heavy drinking can reduce your cancer risk. 
             Research links obesity to more aggressive prostate cancer.
             <br><br>
             Even small daily changes — such as eating better and moving more — make a long-term difference.
           </p>
-        </div>
+              <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
+                <img src="../images/health.jpg" alt="Men's prostate health tips" class="rounded-lg shadow-lg w-full md:w-4/5">
+              </div>
       </div>
 
       <!-- New Zealand Research -->
       <div class="my-10" id="nzresearch">
         <h2 class="text-2xl font-semibold text-steel-blue mb-3 font-montserrat">Latest Research in New Zealand</h2>
         <ul class="list-disc ml-6 text-gray-700 space-y-2">
-          <li><strong>University of Otago</strong> – studying how gut health and diet affect prostate cancer risk.</li>
-          <li><strong>Auckland Cancer Society Research Centre</strong> – exploring targeted treatments for prostate cancer cells.</li>
-          <li><strong>Prostate Cancer Foundation NZ</strong> – supporting trials on lifestyle, early detection, and wellbeing.</li>
+          <li><strong>University of Otago</strong> – researchers are investigating how diet and gut health may influence prostate cancer development and progression.</li>
+          <li><strong>Auckland Cancer Society Research Centre</strong> – focusing on understanding cancer mechanisms and developing targeted therapies to improve patient outcomes.</li>
+          <li><strong>Prostate Cancer Foundation NZ</strong> – supporting research projects on lifestyle, early detection, advanced imaging, and clinical trials for better prostate cancer care.</li>
         </ul>
         <p class="mt-4 text-gray-700">
           Learn more at 
-          <a href="https://prostate.org.nz/research/" target="_blank" class="text-honolulu-blue font-semibold hover:underline">
+          <a href="https://prostate.org.nz/our-research" target="_blank" class="text-honolulu-blue font-semibold hover:underline">
             Prostate Cancer Foundation NZ Research
           </a>.
         </p>
@@ -170,7 +186,7 @@
             </p>
             <p class="mt-4">
               <div class="flex flex-col md:flex-row-reverse gap-6 items-center">
-                <img src="../images/dog.jpg" alt="Men exercising outdoors" class="rounded-lg shadow-lg w-full md:w-4/5">
+                <img src="../images/dog.jpg" alt="K9MD dog" class="rounded-lg shadow-lg w-full md:w-4/5">
               </div>
               Learn more about K9MD trials and research: 
               <a href="https://www.k9md.org.nz/research/prostate-cancer-clinical-trials" target="_blank" class="text-honolulu-blue font-semibold hover:underline">
@@ -193,9 +209,38 @@
         </a>
       </div>
 
+        <!-- AI Chatbox Section -->
+        <button 
+          id="chatToggle" 
+          class="fixed bottom-4 right-4 bg-honolulu-blue text-white text-lg font-semibold rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-blue-900 z-50">
+          <i class="fa-solid fa-message"></i>
+        </button>
+        <div id="chatbox" class="fixed bottom-6 right-6 w-96 bg-white rounded-2xl shadow-xl border border-gray-200 z-50">
+          <div class="bg-honolulu-blue text-white px-4 py-3 rounded-t-2xl font-semibold flex justify-between items-center">
+            <span>AI Health Assistant</span>
+            <button id="closeChat" class="text-white text-lg font-bold hover:text-gray-300">&times;</button>
+          </div>
+
+          <div id="chatMessages" class="h-80 overflow-y-auto p-4 text-sm text-gray-800">
+            <div class="text-gray-500 text-center italic">
+              Kia ora! 👋 I’m your prostate cancer info assistant.<br>
+              Ask me anything about prostate cancer in New Zealand.
+            </div>
+          </div>
+
+        <div class="input-area">
+          <input 
+            id="userInput" 
+            type="text" 
+            placeholder="Type your question..." 
+          />
+          <button id="sendBtn">Send</button>
+        </div>
+
     </section>
   </main>
 
   <script src="../js/header-dropdown.js"></script>
+  <script src="../js/aiAgent.js"></script>
 </body>
 </html>

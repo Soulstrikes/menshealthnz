@@ -1,0 +1,9 @@
+# Ignore environment files with secrets
+.env
+
+# Ignore node modules
+node_modules/
+
+# Ignore build/output folders
+dist/
+build/

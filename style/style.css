@@ -270,6 +270,131 @@ main {
   border-radius: 0;
 }
 
+/* ==============================
+   AI Chatbox Styling (Enhanced)
+============================== */
+
+/* Chat button (already good, keeping same) */
+#chatToggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+/* Bigger chatbox for comfortable reading */
+#chatbox {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+  width: 30rem;
+  max-height: 38rem;
+  display: none;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* When chatbox is visible */
+#chatbox:not(.hidden) {
+  display: flex;
+}
+
+/* Message area styling */
+#chatMessages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Chat input area */
+.input-area {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 0.75rem;
+  background: white;
+  gap: 0.5rem;
+}
+
+/* Make search bar longer */
+.input-area input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-area input:focus {
+  border-color: #007EC3;
+  box-shadow: 0 0 0 2px rgba(0,126,195,0.2);
+}
+
+/* Send button bottom-right */
+.input-area button {
+  background-color: #007EC3;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.input-area button:hover {
+  background-color: #005f91;
+}
+
+/* ==============================
+   Chat Message Bubbles
+============================== */
+
+.message-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+/* AI messages aligned to left */
+.message-row.ai {
+  justify-content: flex-start;
+}
+
+/* User messages aligned to right */
+.message-row.user {
+  justify-content: flex-end;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  word-wrap: break-word;
+}
+
+/* AI bubble (left) */
+.message.ai {
+  background-color: #e6f2fb;
+  color: #333;
+  border-top-left-radius: 0.25rem;
+}
+
+/* User bubble (right) */
+.message.user {
+  background-color: #007EC3;
+  color: #fff;
+  border-top-right-radius: 0.25rem;
+}
 
 /* ==============================
    Mobile Dropdown
@@ -406,4 +531,105 @@ header > .max-w-6xl > a {
 
 @media (min-width: 48rem) {
   .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ==============================
+   Responsive Design for AI Chatbox
+============================== */
+@media (max-width: 48rem) {
+  /* Adjust chatbox size and position for tablets and small laptops */
+  #chatbox {
+    right: 1rem;
+    bottom: 1rem;
+    width: 85%;
+    max-height: 70vh;
+  }
+
+  #chatMessages {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.4rem;
+  }
+
+  .input-area input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .input-area button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #infoDropdown {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 95% !important;        /* wider than before */
+    max-width: 24rem !important;  /* slightly bigger max width */
+    box-sizing: border-box;       /* include padding in width */
+  }
+
+  #infoDropdown li a {
+    white-space: normal;
+    word-wrap: break-word;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ==============================
+   Mobile Optimization
+============================== */
+@media (max-width: 480px) {
+  #chatbox {
+    right: 0.5rem;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    width: auto;
+    height: 80vh;
+    max-height: none;
+  }
+
+  #chatMessages {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .input-area {
+    padding: 0.5rem;
+  }
+
+  .input-area input {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .input-area button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+
+  /* Resize chat toggle button for smaller screens */
+  #chatToggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.25rem;
+  }
+
+  /* Ensure text bubbles scale gracefully */
+  .message {
+    max-width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .message.ai {
+    background-color: #f1f5f9;
+  }
 }
