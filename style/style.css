@@ -310,6 +310,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  white-space: pre-wrap;   /* preserves line breaks from backend */
+  line-height: 1.6;        /* more space between lines */
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;      /* adjust font to fit small box */
 }
 
 /* Chat input area */
