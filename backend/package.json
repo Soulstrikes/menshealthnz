@@ -10,11 +10,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "node-fetch": "^3.3.2"
-  }
+    "mammoth": "^1.11.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.6.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
 }
