@@ -462,6 +462,15 @@ header > .max-w-6xl > a {
   flex-shrink: 0;
 }
 
+.header-logo {
+  width: 3em;          /* scales with font size */
+  height: auto;        /* keeps proportions */
+  border-radius: 0.4em; /* subtle rounding */
+  object-fit: contain;
+  box-shadow: 0 0.15em 0.4em rgba(0, 0, 0, 0.15); /* optional soft shadow */
+}
+
+
 /* ==============================
    Age Slider Width Adjustment
 ============================== */
@@ -471,6 +480,107 @@ header > .max-w-6xl > a {
   display: block;
 }
 
+/* ==============================
+   Footer Styling
+============================== */
+footer {
+  background-color: #007EC3; /* matches honolulu blue */
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 100; 
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 12rem;
+}
+
+.footer-column h3 {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0;
+  display: block;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0.3rem 0;
+}
+
+.footer-bottom p:last-child {
+  font-style: italic;
+}
+
+.footer-logo-img {
+  width: 3em;
+  height: auto;
+  border-radius: 0.4em;
+  object-fit: contain;
+  box-shadow: 0 0.15em 0.4em rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 48rem) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .footer-column h3 {
+    margin-top: 1rem;
+  }
+
+  .footer-logo img {
+    margin: 0 auto 1rem auto;
+  }
+}
 
 /* ==============================
    Responsive Design
