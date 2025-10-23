@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hide chat by default
   chatbox.classList.add("hidden");
 
+  // Load chat history from localStorage
+  const savedMessages = JSON.parse(localStorage.getItem("chatHistory")) || [];
+  savedMessages.forEach((msg) => appendMessage(msg.sender, msg.text));
+
   // Toggle chat visibility
   chatToggle.addEventListener("click", () => {
     chatbox.classList.toggle("hidden");
@@ -27,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add user message (right side)
     appendMessage("user", question);
+    saveMessage("user", question);
     userInput.value = "";
 
     // Add temporary "Thinking..." (left side)
@@ -38,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
       });
-      const data = await res.json();
 
+      const data = await res.json();
       const aiResponse =
         data.choices?.[0]?.message?.content ||
         data.error?.message ||
@@ -47,9 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Replace the "Thinking..." message with the actual AI response
       updateMessage(thinkingMsg, aiResponse);
+      saveMessage("ai", aiResponse);
     } catch (err) {
       console.error(err);
       updateMessage(thinkingMsg, "Sorry, something went wrong.");
+      saveMessage("ai", "Sorry, something went wrong.");
     }
   }
 
@@ -63,27 +70,34 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==============================
 
   function appendMessage(sender, text) {
-    // Create row for alignment
     const row = document.createElement("div");
     row.classList.add("message-row", sender);
 
-    // Create message bubble
     const message = document.createElement("div");
     message.classList.add("message", sender);
     message.textContent = text;
 
-    // Add bubble into row, then row into chat area
     row.appendChild(message);
     chatMessages.appendChild(row);
 
-    // Auto-scroll to bottom
     chatMessages.scrollTop = chatMessages.scrollHeight;
-
-    return message; // return element for updates (e.g., replace "Thinking...")
+    return message;
   }
 
   function updateMessage(element, newText) {
     element.textContent = newText;
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
+
+  function saveMessage(sender, text) {
+    const currentHistory = JSON.parse(localStorage.getItem("chatHistory")) || [];
+    currentHistory.push({ sender, text });
+    localStorage.setItem("chatHistory", JSON.stringify(currentHistory));
+  }
+
+  // Optional: Clear chat history manually (for debugging)
+  window.clearChatHistory = function () {
+    localStorage.removeItem("chatHistory");
+    chatMessages.innerHTML = "";
+  };
 });
