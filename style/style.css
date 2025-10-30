@@ -726,3 +726,14 @@ footer {
     background-color: #f1f5f9;
   }
 }
+
+@media (max-width: 1548px) {
+  .fixed-sidebar {
+    display: none;
+  }
+
+  /* Optional: make the main content take full width */
+  .main-with-sidebar {
+    padding-left: 0;
+  }
+}
