@@ -772,9 +772,19 @@ footer {
     gap: 0.75rem; /* smaller space between logo/title and nav */
   }
 
-  /* Ensure dropdown fits */
   #infoDropdown {
-    width: 180px;  /* smaller width */
+    width: 300px !important;      /* wider box */
+    padding: 0.3rem 0 !important; /* more vertical spacing */
+  }
+
+  #infoDropdown a {
+    font-size: 0.85rem !important;  /* smoother readable text */
+    padding: 0.45rem 0.8rem !important;
+    white-space: normal !important; /* allow line-wrap for long text */
+  }
+
+  #infoDropdown li {
+    border-width: 0 !important;   /* remove double borders */
   }
 
   /* Header padding */
