@@ -751,14 +751,14 @@ footer {
   }
 
   header .font-bold {
-    font-size: 0.7rem; /* smaller title text */
+    font-size: 0.85rem; /* smaller title text */
   }
 
   /* Nav adjustments */
   header nav {
     gap: 0.25rem;       /* smaller gap between links */
     flex-wrap: nowrap;  /* keep nav in one line */
-    font-size: 0.7rem;  /* smaller font for links */
+    font-size: 0.8rem;  /* smaller font for links */
     width: auto;        /* shrink nav to content width */
   }
 
