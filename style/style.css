@@ -773,19 +773,24 @@ footer {
   }
 
   #infoDropdown {
-    width: 300px !important;      /* wider box */
-    padding: 0.3rem 0 !important; /* more vertical spacing */
+    width: 260px !important;        /* wide but safe for mobile */
+    left: 0 !important;             /* align under button */
+    right: auto !important;         /* prevent overshoot */
+    transform: translateX(-10%);    /* shift slightly to the right */
+    padding: 0.3rem 0 !important;
+    overflow-wrap: break-word !important;  /* prevent text breaking outside */
   }
 
   #infoDropdown a {
-    font-size: 0.85rem !important;  /* smoother readable text */
+    font-size: 0.85rem !important;
     padding: 0.45rem 0.8rem !important;
-    white-space: normal !important; /* allow line-wrap for long text */
+    white-space: normal !important;
   }
 
   #infoDropdown li {
-    border-width: 0 !important;   /* remove double borders */
+    border-width: 0 !important;
   }
+
 
   /* Header padding */
   header {
