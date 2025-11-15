@@ -607,6 +607,10 @@ footer {
     margin-bottom: 0.5rem;
   }
 
+  .hide-on-mobile {
+    display: none;
+  }
+
   header nav {
     width: 100%;
     justify-content: center;
@@ -735,5 +739,51 @@ footer {
   /* Optional: make the main content take full width */
   .main-with-sidebar {
     padding-left: 0;
+  }
+}
+
+/* Smaller header logo and title on mobile */
+@media screen and (max-width: 640px) {
+  /* Logo and title */
+  header .header-logo {
+    width: 2.2rem;  /* smaller logo */
+    height: auto;
+  }
+
+  header .font-bold {
+    font-size: 1rem; /* smaller title text */
+  }
+
+  /* Nav adjustments */
+  header nav {
+    gap: 0.5rem;       /* smaller gap between links */
+    flex-wrap: nowrap;  /* keep nav in one line */
+    font-size: 0.9rem;  /* smaller font for links */
+    width: auto;        /* shrink nav to content width */
+  }
+
+  header nav a,
+  header nav button {
+    padding: 0.25rem 0.5rem; /* smaller padding */
+  }
+
+  /* Reduce gap between logo and nav */
+  header > .max-w-6xl > div.flex.items-center.gap-4 {
+    gap: 0.75rem; /* smaller space between logo/title and nav */
+  }
+
+  /* Ensure dropdown fits */
+  #infoDropdown {
+    width: 180px;  /* smaller width */
+  }
+
+  /* Header padding */
+  header {
+    padding: 0.5rem 1rem; /* smaller top/bottom padding */
+  }
+
+  /* Keep call-to-action hidden */
+  .hide-on-mobile {
+    display: none !important;
   }
 }
